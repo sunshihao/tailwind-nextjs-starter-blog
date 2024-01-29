@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  blogTile: "Freedom",
+  blogTile: "Welcome to William Son's blog!",
   title: "William Son's Blog",
   author: 'William Son',
   headerTitle: "William Son's Blog",
