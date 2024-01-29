@@ -1,0 +1,157 @@
+---
+title: Front-end Engineering CSS Initialization Global Settings
+date: '2023-10-20'
+tags: ['css']
+draft: true
+summary: 
+images: []
+---
+
+Sharing the CSS styles for initializing front-end engineering settings, commonly known as CSS Reset. In ancient times, due to differences between browsers, front-end engineering had to set default parameters to maintain style consistency, which evolved into CSS Reset. Nowadays, UI designs are more mature and often include similar settings. If conflicts arise with the UI styles in your project, please use them cautiously.
+
+### Common:
+
+```
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+```
+Preventing overflow of length and width in the box model.
+
+Compared to the previous practice of setting all elements to box-sizing: border-box;, this initialization definition is more user-friendly. If different box-sizing values are set in a node, its child nodes will inherit them.
+```
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+ul[class],
+ol[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+```
+Remove strange fixed lengths in some HTML tags, such as the 8px on the body.
+```
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+```
+
+Set the height and line height of the body.
+
+```
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+```
+
+Set the color style of the \<a\> tag to match the text, rather than the default color.
+
+```
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+```
+
+```
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+```
+Set whether the browser should insert line breaks within a string that cannot be broken, to prevent text overflow.
+
+### IOS
+```
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+```
+
+Prevent font size increase on iPhone when in landscape mode.
+
+
+
+```
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+// IOS
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+```
+Summary as above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
