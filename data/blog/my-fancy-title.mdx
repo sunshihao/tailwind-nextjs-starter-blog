@@ -1,10 +1,36 @@
 ---
-title: My fancy title
-date: '2021-01-31'
-tags: ['hello']
+title: Install NVM on ubuntu server
+date: '2023-10-13'
+tags: ['node', 'ubuntu', 'shell']
 draft: true
 summary: draft post
 images: []
 ---
 
-Draft post which should not display
+In order to easily switch node versions on the ubuntu server, we use nvm as the node version management tool on the server. The steps are as follows:
+
+1. The server executes the installation command:
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+```
+2. After the installation is complete, close the current terminal window and reopen a new terminal window.
+
+3. Run the following command to verify whether nvm is installed successfully.
+```
+nvm --version
+```
+You can see the version number of nvm
+
+In addition, if the nvm command fails after re-opening a new terminal window after nvm is set, check whether the environment variables are set in the user file .bashrc or .bash_profile file. Examples are as follows:
+```
+export NVM_DIR="$HOME/.nvm" 
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+```
+Perform refresh configuration after setting
+```
+source ~/.bashrc
+or
+source ~/.bash_profile
+```
