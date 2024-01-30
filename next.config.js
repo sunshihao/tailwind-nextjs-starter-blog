@@ -1,4 +1,5 @@
 const { withContentlayer } = require('next-contentlayer')
+const path = require('path')
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -75,6 +76,9 @@ module.exports = () => {
           headers: securityHeaders,
         },
       ]
+    },
+    sassOptions: {
+      includePaths: [path.join(__dirname, 'styles')],
     },
     webpack: (config, options) => {
       config.module.rules.push({

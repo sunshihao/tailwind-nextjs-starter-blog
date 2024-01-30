@@ -3,6 +3,7 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import 'css/banner.scss'
 
 const MAX_DISPLAY = 5
 
@@ -18,6 +19,35 @@ export default function Home({ posts }) {
             {siteMetadata.description}
           </p>
         </div>
+        {/* -- */}
+        <div className="banner">
+          <div className="banner-info">
+            <div className="banner-info-title"></div>
+            <div className="banner-info-desc"></div>
+          </div>
+          <svg
+            className="banner-waves"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shape-rendering="auto"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88
+                    -18 s 58 18 88 18 v 44 h -352 Z"
+              ></path>
+            </defs>
+            <g className="parallax">
+              <use x="48" y="0"></use>
+              <use x="48" y="3"></use>
+              <use x="48" y="5"></use>
+              <use x="48" y="7"></use>
+            </g>
+          </svg>
+        </div>
+        {/* -- */}
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
