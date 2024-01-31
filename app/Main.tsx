@@ -11,23 +11,20 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="space-y-2 pb-8 pt-6 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            {siteMetadata.blogTile}
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
-          </p>
-        </div>
-        {/* -- */}
-        <div className="banner">
+        <div className="banner" style={{ backgroundImage: `url(${siteMetadata.bannerImage})` }}>
           <div className="banner-info">
-            <div className="banner-info-title"></div>
-            <div className="banner-info-desc"></div>
+            {/* <div className="banner-info-title text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"> */}
+            <div className="banner-info-title text-3xl font-extrabold leading-9 tracking-tight text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+              {siteMetadata.blogTile}
+            </div>
+            <div className="banner-info-desc text-lg leading-7 text-gray-100">
+              {siteMetadata.description}
+            </div>
           </div>
           <svg
             className="banner-waves"
             xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28"
             preserveAspectRatio="none"
             shape-rendering="auto"
@@ -40,10 +37,10 @@ export default function Home({ posts }) {
               ></path>
             </defs>
             <g className="parallax">
-              <use x="48" y="0"></use>
-              <use x="48" y="3"></use>
-              <use x="48" y="5"></use>
-              <use x="48" y="7"></use>
+              <use xlinkHref="#gentle-wave" x="48" y="0"></use>
+              <use xlinkHref="#gentle-wave" x="48" y="3"></use>
+              <use xlinkHref="#gentle-wave" x="48" y="5"></use>
+              <use xlinkHref="#gentle-wave" x="48" y="7"></use>
             </g>
           </svg>
         </div>

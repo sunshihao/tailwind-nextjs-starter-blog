@@ -1,8 +1,9 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   blogTile: "Welcome to William Son's blog!",
-  title: "ssh",
+  title: "William's blog", // 标签栏
   author: 'William Son',
+  bannerImage: '/static/images/ged001.jpg', // 首页banner默认图
   headerTitle: "William Son's Blog",
   description: 'Spirit of independence, thoughts of freedom.',
   language: 'en-us',
@@ -14,7 +15,7 @@ const siteMetadata = {
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: '4sh945@gmail.com',
   github: 'https://github.com',
-  twitter: 'https://twitter.com/Twitter',
+  twitter: 'https://twitter.com',
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com',

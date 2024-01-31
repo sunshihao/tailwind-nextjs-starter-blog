@@ -1,13 +1,31 @@
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  to {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .banner {
     width: 100%;
-    height: 54vh;
+    height: 44vh;
     position: relative;
-    margin-bottom: -4rem;
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 8vh;
+    // align-items: center;
   
     &:before {
       content: "";
@@ -36,7 +54,6 @@
       &-desc {
         font-size: 1.4rem;
         line-height: 1.4;
-        max-width: 600px;
   
         &:after {
           content: '_';
@@ -52,7 +69,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      fill: var(--background);
+      fill: rgba(255, 255, 255, 0.94);
   
       .parallax > use {
         animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
