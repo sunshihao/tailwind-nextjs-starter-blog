@@ -5,7 +5,7 @@ const siteMetadata = {
   author: 'William Son',
   bannerImage: '/static/images/ged001.jpg', // 首页banner默认图
   headerTitle: "William Son's Blog",
-  description: 'Spirit of independence, thoughts of freedom.',
+  description: 'Spirit of independence, thoughts of freedom',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
