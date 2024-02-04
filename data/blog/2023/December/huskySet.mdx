@@ -1,0 +1,84 @@
+---
+title: Husky Settings
+date: '2023-12-07'
+tags: ["node", "js"]
+draft: true
+summary: ""
+images: ['/static/blog/hs_01.png']
+---
+
+### Introduction
+Husky is a tool used to set up Git hooks in Git repositories. Git hooks are custom scripts or commands triggered when specific Git operations, such as commits, merges, etc., occur. Husky allows developers to run custom scripts before or after Git operations to perform various tasks, such as code formatting, code quality checks, testing, etc.
+
+### Installation and Configuration
+
+#### Method One (Simple and Fast)
+
+```
+npx husky-init && npm install
+```
+
+#### Method Two
+
+1.Install Husky
+```
+npm install husky --save-dev
+```
+2.Enable Husky
+```
+npx husky install
+```
+
+3.Running the command will add the following command to the package.json file
+```
+npm pkg set scripts.prepare="husky install"
+```
+
+```
+{
+    scripts: {
+        "prepare": "husky install"
+    }
+}
+```
+
+After the installation is complete:
+
+* A .husky folder is generated at the same level as the .git directory. Within this folder, there is an editable example pre-commit hook.
+
+* The "prepare" script is added to the scripts section in package.json: "prepare": "husky install"
+
+* The config file under the .git directory is modified to set the core.hooksPath configuration option to .husky.
+
+### Hook Management
+
+#### 1.Create a commit-msg hook
+```
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+```
+
+After successful creation
+<div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
+![Lake](/static/blog/hs_01.png)
+</div>
+
+#### 2.Update or modify
+
+Simply modify the scripts within the hooks directory located in the .husky folder.
+
+#### 3.Uninstall and revert
+```
+npm uninstall husky && git config --unset core.hooksPath
+```
+
+
+
+
+
+
+
+
+
+
+
+
