@@ -5,6 +5,7 @@ const colors = require('tailwindcss/colors')
 /** @type {import("tailwindcss/types").Config } */
 module.exports = {
   content: [
+    './node_modules/flowbite-react/lib/**/*.js',
     './node_modules/pliny/**/*.js',
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,tsx}',
@@ -67,5 +68,9 @@ module.exports = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('flowbite/plugin'),
+  ],
 }
