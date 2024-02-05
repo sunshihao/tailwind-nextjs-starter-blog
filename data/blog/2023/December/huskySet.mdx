@@ -24,6 +24,7 @@ npx husky-init && npm install
 ```
 npm install husky --save-dev
 ```
+
 2.Enable Husky
 ```
 npx husky install
@@ -43,11 +44,8 @@ npm pkg set scripts.prepare="husky install"
 ```
 
 After the installation is complete:
-
 * A .husky folder is generated at the same level as the .git directory. Within this folder, there is an editable example pre-commit hook.
-
 * The "prepare" script is added to the scripts section in package.json: "prepare": "husky install"
-
 * The config file under the .git directory is modified to set the core.hooksPath configuration option to .husky.
 
 ### Hook Management
@@ -58,7 +56,7 @@ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
 ```
 
 After successful creation
-<div className="my-1 w-full overflow-hidden px-2 xl:my-1 xl:w-1/2 xl:px-2">
+<div className="my-1 w-full overflow-hidden px-1 xl:my-0 xl:w-1/2 xl:px-2">
 ![Lake](/static/blog/hs_01.png)
 </div>
 

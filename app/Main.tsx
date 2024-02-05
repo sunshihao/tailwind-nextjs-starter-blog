@@ -22,7 +22,7 @@ export default function Home({ posts }) {
             </div>
           </div>
           <svg
-            className="banner-waves"
+            className="banner-waves fill-white dark:fill-gray-950"
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28"
