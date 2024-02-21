@@ -4,7 +4,7 @@ const siteMetadata = {
   title: "William's blog", // 标签栏
   author: 'William Son',
   bannerImage: '/static/images/ged001.jpg', // 首页banner默认图
-  headerTitle: "William Son's Blog",
+  headerTitle: "William Son's",
   // description: 'Spirit of independence, thoughts of freedom',
   description: 'Urgently explore the unknown',
   language: 'en-us',

@@ -5,29 +5,28 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
-import Fading from '@/components/springAnimation/Fading'
+// import Fading from '@/components/springAnimation/Fading'
+import Reversal from '@/components/springAnimation/Reversal'
 
 const Header = () => {
   return (
     <header className="flex items-center justify-between py-10">
-      <div>
+      <div className="flex items-center justify-between">
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             <div className="mr-3">
               <Logo />
             </div>
             {typeof siteMetadata.headerTitle === 'string' ? (
-              <div className="hidden h-6 text-2xl font-semibold sm:block">
+              <div className="hidden text-2xl font-semibold sm:block">
                 {siteMetadata.headerTitle}
               </div>
             ) : (
               siteMetadata.headerTitle
             )}
+            <Reversal />
           </div>
         </Link>
-      </div>
-      <div style={{ height: '200px', width: '200px' }}>
-        <Fading />
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
         {headerNavLinks
