@@ -1,13 +1,31 @@
-blog address:  https://sshfe.click
+## 说明
 
-plan:
+1.博客地址（Blog Address）:  https://sshfe.click
 
-* [ ]  首屏音乐
-* [ ]  ai聊天宠物
-* [ ]  菜单
-* [ ]  目录树
-* [ ]  主页卡片
-* [ ]  twitter账号
-* [ ]  linkedin账号
-* [ ]  facebook账号
-* [ ]  打包方式性优化
+2.目录结构（Menu）:
+
+| 目录       | 说明****         |
+| ---------- | ---------------- |
+| app        | 前端页面主体工程 |
+| components | 组件插件         |
+| css        | 全局样式         |
+| data       | 可配置性内容     |
+| layouts    | 布局性文件       |
+| packages   | 分包（待开发）   |
+| public     | 静态资源         |
+| scripts    | 静态mjs          |
+
+3.计划（Plan）:
+
+[ ]  宠物(AI)
+
+[ ]  侧栏菜单
+
+[ ]  目录树
+
+[ ]  主页卡片
+
+[ ]  twitter账号
+
+[ ]  加载速度优化
+

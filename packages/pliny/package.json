@@ -1,0 +1,66 @@
+{
+  "name": "pliny",
+  "description": "Main entry point for pliny components",
+  "homepage": "https://github.com/timlrx/pliny",
+  "version": "0.1.7",
+  "type": "module",
+  "exports": {
+    "./*": "./*",
+    "./analytics/*": "./analytics/*",
+    "./comments/*": "./comments/*",
+    "./mdx-plugins/*": "./mdx-plugins/*",
+    "./newsletter/*": "./newsletter/*",
+    "./search/*": "./search/*",
+    "./ui/*": "./ui/*",
+    "./utils/*": "./utils/*"
+  },
+  "files": [
+    "**"
+  ],
+  "scripts": {
+    "dev": "tsup && cp -fR dist/* ./ && tsup --config tsup.ui.config.ts && rimraf dist && node add-use-client.mjs",
+    "build": "tsup && cp -fR dist/* ./ && tsup --config tsup.ui.config.ts && rimraf dist && node add-use-client.mjs && yarn copyfiles",
+    "copyfiles": "copyfiles -f public/algolia.css search"
+  },
+  "author": "Timothy Lin <timothy0336@hotmail.com> (https://timlrx.com)",
+  "dependencies": {
+    "@docsearch/react": "^3.5.0",
+    "@giscus/react": "^2.3.0",
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "contentlayer": "^0.3.4",
+    "copyfiles": "^2.4.1",
+    "github-slugger": "^2.0.0",
+    "js-yaml": "4.1.0",
+    "kbar": "0.1.0-beta.45",
+    "next-contentlayer": "^0.3.4",
+    "next-themes": "^0.2.1",
+    "probe-image-size": "^7.2.3",
+    "remark": "^14.0.2",
+    "unist-util-visit": "^4.1.0"
+  },
+  "peerDependencies": {
+    "next": ">=13.0.0",
+    "react": "^17.0.2 || ^18.0.0",
+    "react-dom": "^17.0.2 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@types/copyfiles": "^2",
+    "next": "13.4.10",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "rimraf": "^3.0.2",
+    "tsup": "7.1.0",
+    "typescript": "^5.1.6"
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx)": [
+      "eslint --fix"
+    ],
+    "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
+      "prettier --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

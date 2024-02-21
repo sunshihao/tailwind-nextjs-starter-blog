@@ -5,6 +5,7 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import Fading from '@/components/springAnimation/Fading'
 
 const Header = () => {
   return (
@@ -24,6 +25,9 @@ const Header = () => {
             )}
           </div>
         </Link>
+      </div>
+      <div style={{ height: '200px', width: '200px' }}>
+        <Fading />
       </div>
       <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
         {headerNavLinks
