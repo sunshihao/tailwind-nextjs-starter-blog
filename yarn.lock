@@ -6582,6 +6582,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"github-slugger@npm:^1.4.0":
+  version: 1.5.0
+  resolution: "github-slugger@npm:1.5.0"
+  checksum: c70988224578b3bdaa25df65973ffc8c24594a77a28550c3636e495e49d17aef5cdb04c04fa3f1744babef98c61eecc6a43299a13ea7f3cc33d680bf9053ffbe
+  languageName: node
+  linkType: hard
+
 "github-slugger@npm:^2.0.0":
   version: 2.0.0
   resolution: "github-slugger@npm:2.0.0"
@@ -7987,6 +7994,22 @@ __metadata:
   bin:
     katex: cli.js
   checksum: 861194dfd4d86505e657f688fb73048d46ac498edafce71199502a35b03c0ecc35ba930c631be79c4a09d90a0d23476673cd52f6bc367c7a161854d64005fa95
+  languageName: node
+  linkType: hard
+
+"kbar@npm:0.1.0-beta.43":
+  version: 0.1.0-beta.43
+  resolution: "kbar@npm:0.1.0-beta.43"
+  dependencies:
+    "@radix-ui/react-portal": ^1.0.1
+    fast-equals: ^2.0.3
+    fuse.js: ^6.6.2
+    react-virtual: ^2.8.2
+    tiny-invariant: ^1.2.0
+  peerDependencies:
+    react: ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: cb3eee56295cd6697149ca083ae42957dccbc15cc52b9fbe62b4ebb6e7e3613a812ed8a0083e81be7aadcb85e22d007a59ac5cee25e0a0caa4ba4c95bb5606c8
   languageName: node
   linkType: hard
 
@@ -10503,7 +10526,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pliny@0.1.7, pliny@workspace:packages/pliny":
+"pliny@npm:0.1.4":
+  version: 0.1.4
+  resolution: "pliny@npm:0.1.4"
+  dependencies:
+    "@docsearch/react": ^3.5.0
+    "@giscus/react": ^2.3.0
+    "@mailchimp/mailchimp_marketing": ^3.0.80
+    contentlayer: ^0.3.4
+    copyfiles: ^2.4.1
+    github-slugger: ^1.4.0
+    image-size: 1.0.0
+    js-yaml: 4.1.0
+    kbar: 0.1.0-beta.43
+    next-contentlayer: ^0.3.4
+    next-themes: ^0.2.1
+    remark: ^14.0.2
+    unist-util-visit: ^4.1.0
+  peerDependencies:
+    next: ">=13.0.0"
+    react: ^17.0.2 || ^18.0.0
+    react-dom: ^17.0.2 || ^18.0.0
+  checksum: d57053d243191376749354404ff97ec0f275947bbce1e981ecdc66382296636eef454665401c197013b9e45a649b94291d74079fd3d65fa6c992408a857770fd
+  languageName: node
+  linkType: hard
+
+"pliny@workspace:packages/pliny":
   version: 0.0.0-use.local
   resolution: "pliny@workspace:packages/pliny"
   dependencies:
@@ -12647,7 +12695,7 @@ __metadata:
     next: 14.0.4
     next-contentlayer: 0.3.4
     next-themes: ^0.2.1
-    pliny: 0.1.7
+    pliny: 0.1.4
     postcss: ^8.4.24
     prettier: ^3.0.0
     prettier-plugin-tailwindcss: ^0.5.11

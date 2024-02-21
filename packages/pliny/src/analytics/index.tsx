@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { GA, GoogleAnalyticsProps } from './GoogleAnalytics'
 import { Plausible, PlausibleProps } from './Plausible'
-import { SimpleAnalytics, SimpleAnalyticsProps } from './SimpleAnalytics.js'
+import { SimpleAnalytics, SimpleAnalyticsProps } from './SimpleAnalytics'
 import { Umami, UmamiProps } from './Umami'
 import { Posthog, PosthogProps } from './Posthog'
 

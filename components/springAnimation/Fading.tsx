@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 
-import styles from './fading.css'
+import styles from './fading.module.css'
 
 const AnimFeTurbulence = animated('feTurbulence')
 const AnimFeDisplacementMap = animated('feDisplacementMap')
