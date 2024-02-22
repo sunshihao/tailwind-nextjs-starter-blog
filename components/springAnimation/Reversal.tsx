@@ -37,6 +37,7 @@ const FrontBox = styled(animated.div, {
   ...SharedStyles,
   backgroundColor: '#fafafa',
   border: 'solid 2px #1a1a1a',
+  color: '#000000',
 })
 
 const BackBox = styled(animated.div, {
