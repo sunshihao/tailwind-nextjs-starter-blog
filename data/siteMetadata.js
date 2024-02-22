@@ -3,10 +3,11 @@ const siteMetadata = {
   blogTile: "Welcome to William Son's blog!",
   title: "William's blog", // 标签栏
   author: 'William Son',
-  bannerImage: '/static/images/ged001.jpg', // 首页banner默认图
+  bannerImage: '/static/images/ged001.jpg', // 首页banner默认图轮播！
   headerTitle: "William Son's",
+  headerTitleAnimation: ['B', 'L', 'O', 'G'],
   // description: 'Spirit of independence, thoughts of freedom',
-  description: 'Urgently explore the unknown',
+  description: 'Spirit of independence, thoughts of freedom',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',

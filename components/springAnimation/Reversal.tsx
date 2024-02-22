@@ -2,6 +2,7 @@
 import { useRef } from 'react'
 import { styled } from '@stitches/react'
 import { useTrail, animated } from '@react-spring/web'
+import siteMetadata from '@/data/siteMetadata'
 
 const AppContainer = styled('div', {
   display: 'flex',
@@ -28,8 +29,9 @@ const SharedStyles = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
+  borderRadius: 5,
   fontFamily: 'Helvetica',
-  fontWeight: 800,
+  fontWeight: 700,
   backfaceVisibility: 'hidden',
 }
 
@@ -47,7 +49,7 @@ const BackBox = styled(animated.div, {
   color: '#fafafa',
 })
 
-const items = ['B', 'L', 'O', 'G']
+const items = siteMetadata.headerTitleAnimation
 
 export default function App() {
   const [trail, api] = useTrail(items.length, () => ({
@@ -71,7 +73,7 @@ export default function App() {
   }
 
   return (
-    <AppContainer className="ml-4">
+    <AppContainer>
       <Container onClick={handleClick}>
         {trail.map(({ rotateX }, i) => (
           <Box key={i}>

@@ -24,7 +24,9 @@ const Header = () => {
             ) : (
               siteMetadata.headerTitle
             )}
-            <Reversal />
+            <div className="ml-2 hidden sm:block">
+              <Reversal />
+            </div>
           </div>
         </Link>
       </div>
